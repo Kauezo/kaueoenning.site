@@ -18,7 +18,7 @@ const Navbar = () => {
 
   const emailSubject = "Contato via Portfólio";
   const emailBody = "Olá Kauê, vi seu portfólio e gostaria de entrar em contato e...";
-  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=kaueoenning9@gmail.com&su=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=kaueoenning@gmail.com&su=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
 
   const navItems = [
     { href: '#home', label: 'Home' },
