@@ -1,0 +1,83 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+
+@layer base {
+  :root {
+    --background: 0 0% 3%;
+    --foreground: 280 10% 95%;
+
+    --card: 0 0% 6%;
+    --card-foreground: 280 10% 95%;
+
+    --popover: 0 0% 6%;
+    --popover-foreground: 280 10% 95%;
+
+    --primary: 280 100% 70%;
+    --primary-foreground: 0 0% 3%;
+
+    --secondary: 280 30% 15%;
+    --secondary-foreground: 280 10% 95%;
+
+    --muted: 280 20% 10%;
+    --muted-foreground: 280 10% 60%;
+
+    --accent: 280 100% 60%;
+    --accent-foreground: 0 0% 3%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 280 30% 18%;
+    --input: 280 30% 18%;
+    --ring: 280 100% 70%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 280 10% 95%;
+    --sidebar-primary: 280 100% 70%;
+    --sidebar-primary-foreground: 0 0% 3%;
+    --sidebar-accent: 280 30% 15%;
+    --sidebar-accent-foreground: 280 10% 95%;
+    --sidebar-border: 280 30% 18%;
+    --sidebar-ring: 280 100% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+  
+  .border-gradient {
+    background: linear-gradient(var(--background), var(--background)) padding-box,
+                linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent))) border-box;
+    border: 2px solid transparent;
+  }
+  
+  .glow {
+    box-shadow: 0 0 20px hsla(var(--primary), 0.3);
+  }
+  
+  .glow-hover:hover {
+    box-shadow: 0 0 30px hsla(var(--primary), 0.5);
+  }
+}
